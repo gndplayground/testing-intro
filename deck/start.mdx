@@ -1,3 +1,10 @@
+import { future, highlight } from "@mdx-deck/themes";
+
+export const theme = {
+  ...future,
+  ...highlight,
+};
+
 # Testing and React
 
 ---
@@ -48,3 +55,73 @@
 - jest.mock
 - jest.spyOn
 
+---
+
+# Test React App
+
+---
+
+# Snapshot testing
+
+---
+
+# React Testing Library
+
+## (@testing-library/react)
+
+Before jump to React Testing Library we can understand basic React testing at [testing-recipes](https://reactjs.org/docs/testing-recipes.html)
+
+---
+
+## Rendering component
+
+```jsx
+import React from "react";
+import { render, screen } from "@testing-library/react";
+
+import Simple from "./Simple";
+
+describe("simple", () => {
+  it("Should render", () => {
+    render(<Simple />);
+
+    screen.debug();
+  });
+});
+```
+
+---
+
+## Rerender
+
+---
+
+## Querying elements
+
+```jsx
+const { getByText } = render(<Simple name="Jean" />);
+
+expect(getByText("Hello, Jean!"));
+```
+
+---
+
+## See more at [cheatsheet](https://testing-library.com/docs/dom-testing-library/cheatsheet)
+
+---
+
+## Fire event
+
+```jsx
+const button = getByTestId("request-profile");
+
+fireEvent.click(button);
+```
+
+---
+
+## React Testing Library encourage web accessibility
+
+---
+
+# End to End test with Cypress

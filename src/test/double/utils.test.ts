@@ -1,4 +1,5 @@
 import { patching, checkOrder, Item, checkShipping } from "./utils";
+import * as helper from "./helper";
 
 describe("patching", () => {
   it("Should return Old", () => {
@@ -85,6 +86,8 @@ describe("checkOrder", () => {
       return false;
     });
 
+    // mock.mockImplementation()
+
     const result = checkOrder(items, mock);
 
     expect(result.ready).toEqual([1]);
@@ -103,7 +106,7 @@ describe("checkOrder", () => {
 //   },
 // }));
 
-jest.mock("./helper.ts");
+// jest.mock("./helper.ts");
 
 describe("checkShipping", () => {
   it("Should return all ready", () => {
@@ -118,8 +121,35 @@ describe("checkShipping", () => {
       },
     ];
 
+    (helper.checkShip as jest.Mock).mockImplementation(() => true);
+
     const result = checkShipping(items);
 
     expect(result.ready).toEqual([1, 2]);
+
+    expect(helper.checkShip).toBeCalledTimes(2);
   });
+
+  // it("Should return all ready", () => {
+  //   const items: Item[] = [
+  //     {
+  //       id: 1,
+  //       count: 1,
+  //     },
+  //     {
+  //       id: 2,
+  //       count: 1,
+  //     },
+  //   ];
+  //
+  //   const checkShipMock = jest.spyOn(helper, "checkShip");
+  //
+  //   checkShipMock.mockImplementation(() => {return true})
+  //
+  //   const result = checkShipping(items);
+  //
+  //   expect(result.ready).toEqual([1, 2]);
+  //
+  //   expect(helper.checkShip).toBeCalledTimes(2)
+  // });
 });

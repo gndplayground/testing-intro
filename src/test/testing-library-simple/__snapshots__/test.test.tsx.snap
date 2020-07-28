@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`simple Should render 1`] = `
+<section>
+  <p>
+    Hello
+  </p>
+</section>
+`;
+
+exports[`simple Should render with name 1`] = `
+<section>
+  <p>
+    Hello
+  </p>
+</section>
+`;
+
+exports[`simple Should render with name 2`] = `
+<section>
+  <p>
+    Hello
+    , Tom!
+  </p>
+</section>
+`;

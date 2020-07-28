@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<UserProfile /> Should display the profile 1`] = `
+<section>
+  <h2>
+    User Profile
+  </h2>
+  <p>
+    Hello 
+    Jon Doe
+  </p>
+</section>
+`;
+
+exports[`<UserProfile /> Should render default 1`] = `
+<section>
+  <h2>
+    User Profile
+  </h2>
+  <button
+    data-testid="request-profile"
+    onClick={[Function]}
+  >
+    Request profile
+  </button>
+</section>
+`;

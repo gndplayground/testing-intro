@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button Should pass props 1`] = `
+<button
+  aria-busy={true}
+  className="my-button "
+  onClick={[Function]}
+>
+  Hello
+</button>
+`;
+
+exports[`Button Should render button 1`] = `
+<button
+  className="my-button "
+>
+  Hello
+</button>
+`;
+
+exports[`Button Should render link 1`] = `
+<a
+  className="my-button my-button--link "
+  href="/URL"
+>
+  Hello
+</a>
+`;
