@@ -11,7 +11,7 @@ describe("simple", () => {
 
     expect(container.firstChild).toMatchSnapshot();
 
-    screen.debug();
+    // screen.debug();
   });
 
   it("Should render with name", () => {
@@ -23,12 +23,13 @@ describe("simple", () => {
 
     expect(container.firstChild).toMatchSnapshot();
 
-    screen.debug();
+    // screen.debug();
   });
 
   it("Should render correct text", () => {
-    const { getByText } = render(<Simple name="Jean" />);
+    const { getByText, getByTestId } = render(<Simple name="Jean" />);
 
-    expect(getByText("Hello, Jean!"));
+    expect(getByText("Hello, Jean!")).toBeInTheDocument();
+    expect(getByTestId("10")).toBeInTheDocument();
   });
 });

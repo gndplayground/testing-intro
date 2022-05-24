@@ -6,7 +6,6 @@ module.exports = {
     "react-app",
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
-    "prettier/@typescript-eslint"
   ],
   rules: {
     "no-console": "warn",

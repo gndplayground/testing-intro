@@ -6,7 +6,7 @@ describe("Button", () => {
   it("Should render button", () => {
     const component = renderer.create(<BestButton>Hello</BestButton>);
 
-    let tree = component.toJSON();
+    const tree = component.toJSON();
 
     expect(tree).toMatchSnapshot();
   });
@@ -16,7 +16,7 @@ describe("Button", () => {
       <BestButton href="/URL">Hello</BestButton>
     );
 
-    let tree = component.toJSON();
+    const tree = component.toJSON();
 
     expect(tree).toMatchSnapshot();
   });
@@ -28,7 +28,7 @@ describe("Button", () => {
       </BestButton>
     );
 
-    let tree = component.toJSON();
+    const tree = component.toJSON();
 
     expect(tree).toMatchSnapshot();
   });

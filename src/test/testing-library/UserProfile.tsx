@@ -19,7 +19,7 @@ const UserProfile = () => {
   return (
     <section>
       <h2>User Profile</h2>
-      {userProfile && <p>Hello {userProfile.name}</p>}
+      {userProfile && <p data-testid="hello-text">Hello {userProfile.name}</p>}
       {!userProfile && (
         <button data-testid="request-profile" onClick={handleRequestProfile}>
           Request profile

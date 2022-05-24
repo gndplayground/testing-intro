@@ -6,8 +6,8 @@ describe("Simple", () => {
     expect(result).toEqual(10);
   });
 
-  // it("Should return 0", () => {
-  //   const result = simple(0, 0);
-  //   expect(result).toEqual(0);
-  // });
+  it("Should return 0", () => {
+    const result = simple(0, 0);
+    expect(result).toEqual(0);
+  });
 });

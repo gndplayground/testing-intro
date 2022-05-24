@@ -6,7 +6,7 @@ type SimpleProps = {
 
 function Simple({ name }: SimpleProps) {
   return (
-    <section>
+    <section data-testid="10">
       <p>Hello{name && `, ${name}!`}</p>
     </section>
   );
