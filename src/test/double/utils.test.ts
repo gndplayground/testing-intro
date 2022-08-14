@@ -1,4 +1,4 @@
-import {checkShip} from "./helper";
+import { checkShip } from "./helper";
 import { patching, checkOrder, Item, checkShipping } from "./utils";
 import * as helper from "./helper";
 
@@ -99,9 +99,9 @@ describe("checkOrder", () => {
 
     expect(result.notReady).toEqual([2, 3]);
 
-    expect(mock).nthCalledWith(1, [2])
+    expect(mock).nthCalledWith(1, [2]);
 
-    expect(mock).nthCalledWith(2, [3])
+    expect(mock).nthCalledWith(2, [3]);
 
     // expect(mock.mock.calls[0][0]).toEqual(2);
     //
@@ -117,15 +117,13 @@ describe("checkOrder", () => {
 
 jest.mock("./helper.ts", () => {
   return {
-    ...jest.requireActual('./helper.ts'),
+    ...jest.requireActual("./helper.ts"),
     checkShip: jest.fn(),
-  }
+  };
 });
 
 describe("checkShipping", () => {
   it("Should return all ready", () => {
-
-
     const items: Item[] = [
       {
         id: 1,

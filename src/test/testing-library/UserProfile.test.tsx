@@ -1,5 +1,5 @@
 import React from "react";
-import {render, fireEvent, act, waitFor} from "@testing-library/react";
+import { render, fireEvent, act, waitFor } from "@testing-library/react";
 import UserProfile from "./UserProfile";
 import { rendererToJson } from "../../utils/test";
 
@@ -17,7 +17,7 @@ describe("<UserProfile />", () => {
     expect(getByText("User Profile")).toBeInTheDocument();
 
     expect(getByTestId("text-hello")).not.toBeInTheDocument();
-  })
+  });
 
   it("Should display the profile", async () => {
     const userProfile = {
@@ -49,11 +49,9 @@ describe("<UserProfile />", () => {
     //   fireEvent.click(button);
     // });
 
-
     jest.advanceTimersByTime(500);
 
     // jest.runAllTimers(); // <- explicitly tell jest to run all setTimeout, setInterval
-
 
     //jest.advanceTimersByTime(1000);
 
